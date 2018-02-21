@@ -9,6 +9,8 @@ type Counter interface {
 	Dec(int64)
 	Inc(int64)
 	Snapshot() Counter
+
+	Mark(int64)
 }
 
 // GetOrRegisterCounter returns an existing Counter or constructs and registers
@@ -109,4 +111,11 @@ func (c *StandardCounter) Inc(i int64) {
 // Snapshot returns a read-only copy of the counter.
 func (c *StandardCounter) Snapshot() Counter {
 	return CounterSnapshot(c.Count())
+}
+
+
+
+
+func (c *StandardCounter) Mark(i int64) {
+	c.Inc(i)
 }
