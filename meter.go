@@ -277,7 +277,23 @@ func (ma *meterArbiter) tickMeters() {
 // }
 
 
-type Meter struct {
-	m ThisMeter
-}
 
+
+
+
+
+
+// type Meter struct {
+// 	m ThisMeter
+// }
+
+
+
+
+
+
+
+
+type Meter struct {
+	ThisMeter
+}
