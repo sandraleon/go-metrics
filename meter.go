@@ -308,6 +308,6 @@ type Meter interface {
 	Counter
 }
 
-func GetOrRegisterMeter(name string, r Registry) ThisMeter {
+func GetOrRegisterMeter(name string, r Registry) Meter {
 	return GetOrRegisterCounter(name, r)
 }
