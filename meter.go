@@ -290,7 +290,9 @@ func (ma *meterArbiter) tickMeters() {
 
 
 
-var Meter Counter
+// var Meter Counter
+
+
 
 
 
@@ -298,3 +300,10 @@ var Meter Counter
 // type Meter struct {
 // 	ThisMeter
 // }
+
+
+
+
+type Meter interface {
+	Counter
+}
